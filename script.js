@@ -40,32 +40,32 @@ function processFormData(event) {
     //Style main message for an error message
     if (!isValid) {
         message.textContent = 'Please fill out all fields';
-        message.style.color = 'red';
-        messageContainer.stlye.borderColor = 'red';
+        message.style.color = '#FF6B6B';
+        messageContainer.stlye.borderColor = '#FF6B6B';
         return;
     }
 
     // Check to see if passwords matchs
     if (password1El.value === password2El.value) {
         passwordsMatch = true;
-        password1El.style.borderColor = 'green';
-        password2El.style.borderColor = 'green';
+        password1El.style.borderColor = '#7FC8A9';
+        password2El.style.borderColor = '#7FC8A9';
     }
 
     else {
         passwordsMatch = false;
         message.textContent = 'Make sure passwords match.';
-        message.style.color = 'red';
-        messageContainer.style.borderColor = 'red';
-        password1El.style.borderColor = 'red'
-        password2El.style.borderColor = 'red'
+        message.style.color = '#FF6B6B';
+        messageContainer.style.borderColor = '#FF6B6B';
+        password1El.style.borderColor = '#FF6B6B'
+        password2El.style.borderColor = '#FF6B6B'
         return;
     }
     // If form is valid and pass match
     if (isValid && passwordsMatch) {
         message.textContent = 'Succesfully registered!';
-        message.style.color = 'green';
-        messageContainer.style.borderColor = 'green';
+        message.style.color = '#7FC8A9';
+        messageContainer.style.borderColor = '#7FC8A9';
     }
 }
 

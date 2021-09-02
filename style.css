@@ -1,29 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
 html {
   box-sizing: border-box;
+}
+h1{
+  color: #f0f0f0 ;
+  opacity: 75%;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Poppins, sans-serif;
   letter-spacing: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #c9ced3
+  background: url('bg-1.jpg');
+  background-position: center center;
+  background-size: cover;
+  
 }
 
 .container {
   width: 480px;
-  height: 630px;
-  background: white;
+  height: 700px;
+  background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
   box-shadow: 0 5px 30px 10px rgba(99, 99, 99, 0.4);
+  backdrop-filter: blur( 15.0px );
 }
 
 /* Form */
@@ -33,30 +40,48 @@ form {
 
 .form-group {
   height: 65px;
+  margin-bottom: 5px;
 }
 
 label {
   position: relative;
-  bottom: 3px;;
+  bottom: 3px;
+  color: #f0f0f0;
+  font-weight: 200;
 }
 
 input{
+  position: relative;
   width: 100%;
   height: 34px;
   padding: 5px;
+  bottom: 3px;
   border: 1px solid black;
   border-radius: 5px;
   outline: none;
   box-sizing: border-box;
   transition: all 0.3.s;
+  background-color: transparent;
+  color: white;
+  
+}
+
+input::placeholder{
+  font-family: Poppins, sans-serif;
+  color: #f0f0f0;
+  letter-spacing: 2px;
+  font-weight: 200 !important;
 }
 
 input:valid{
-border: 1px solid green;
+border: 1px solid #419EC9;
+background: transparent;
 }
 input:invalid{
-border: 1px solid red;
+border: 1px solid #E92A5A;
+background: transparent;
 }
+input:focus{background-color: transparent !important;}
 
 button {
   cursor: pointer;
@@ -74,7 +99,7 @@ button {
 button:hover{
   filter: brightness(200%);
   background-color: rgb(24, 24, 24);
-  transition: all 0.3;
+  transition: all 0.3s ease-in-out;
 }
 
 button:focus{
@@ -82,11 +107,13 @@ button:focus{
 }
 
 .message-container{
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 5px;
   width: 90%;
-margin-top: 20px;
-display: flex;
-justify-content: center;
-color: black;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  letter-spacing: 4px;
 }
+
